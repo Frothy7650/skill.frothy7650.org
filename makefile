@@ -1,6 +1,6 @@
-DEBUGFLAGS := -os linux -g -showcc -show-c-output -cc clang -keepc
-VFLAGS := -os linux -cc clang -prod -cflags "-Wall -Wextra -Wshadow -Wformat=2 -Wconversion -Wfloat-equal -O2"
-WINVFLAGS := -os windows -cc clang -prod -cflags "-Wall -Wextra -Wshadow -Wformat=2 -Wconversion -Wfloat-equal -O2"
+DEBUGFLAGS := -os linux -g -showcc -show-c-output -cc clang -keepc -enable-globals
+VFLAGS := -os linux -cc clang -prod -cflags "-Wall -Wextra -Wshadow -Wformat=2 -Wconversion -Wfloat-equal -O2" -enable-globals
+WINVFLAGS := -os windows -cc clang -prod -cflags "-Wall -Wextra -Wshadow -Wformat=2 -Wconversion -Wfloat-equal -O2" -enable-globals
 BIN := skill-frothy7650-org
 OUTPUT := ./build/$(BIN)
 

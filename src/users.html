@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>@name</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    @for user in users
+      <div>
+        <b>@user.name</b> <br />
+        @user.bio
+      </div>
+    @end
+  </body>
+</html>
