@@ -2,6 +2,7 @@ module main
 
 import db.sqlite
 import veb
+import os
 
 __global (
   const string name = "idk yet"
@@ -18,8 +19,9 @@ pub struct App{
 
 fn main()
 {
+  if os.exists("db.sqlite") { os.rm("db.sqlite")! }
   mut app := &App{
-    db: sqlite.connect(":memory")!
+    db: sqlite.connect("db.sqlite")!
   }
 
   sql app.db {
